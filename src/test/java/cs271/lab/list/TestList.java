@@ -41,7 +41,7 @@ public class TestList {
 
   @Test
   public void testSizeNonEmpty() {
-    // TODO fix the expected values in the assertions below
+    // TODO fix the expected values in the assertions below: completed
     list.add(77);
     assertEquals(false, list.isEmpty());
     assertEquals(1, list.size());
@@ -50,10 +50,13 @@ public class TestList {
 
   @Test
   public void testContains() {
-    // TODO write assertions using
+    // TODO write assertions using: completed
     // list.contains(77)
     // that hold before and after adding 77 to the list
-    fail("Not yet implemented"); // remove this line when done
+    assertFalse(list.contains(77));
+    list.add(77);
+    assertTrue(list.contains(77));
+
   }
 
   @Test
