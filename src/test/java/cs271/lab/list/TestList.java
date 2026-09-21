@@ -188,8 +188,11 @@ public class TestList {
     list.add(55);
     list.add(77);
     list.add(66);
-    // TODO use the set method to change specific elements in the list
+    // TODO use the set method to change specific elements in the list: complete
     // such that the following assertions pass
+    list.set(1, 99);
+    list.set(3, 99);
+    list.set(5, 99);
     // (without touching the assertions themselves)
     assertEquals(7, list.size());
     assertEquals(33, list.get(0).intValue());
