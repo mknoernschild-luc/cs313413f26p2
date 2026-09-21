@@ -1,16 +1,16 @@
-COMP 313/413 Project 2 Report Template
+COMP 313/413 Project 2 Report
 
 TestList.java and TestIterator.java
 
 	TODO also try with a LinkedList - does it make any difference?
 
-    There is no observable difference between using Lint or LinkedList. The differences between
+    There is no observable difference between using List or LinkedList. The differences between
     the two classes are performance and internal structure, which the available tests can't observe.
 
 TestList.java
 	testRemoveObject()
 		list.remove(5); // what does this method do?
-			list.remove(5) removed the value at index 5, which is second instance of 77.
+			list.remove(5) removed the value at index 5, which is the second instance of 77.
 			So, the list becomes: [3, 77, 4, 77, 5, 6].
 
 		list.remove(Integer.valueOf(5)); // what does this one do?
@@ -22,7 +22,7 @@ TestIterator.java
 		i.remove(); // what happens if you use list.remove(77)?
 			If you use list.remove(Integer.valueOf(77)) instead of i.remove(), the first 77 is removed from the
 			list directly, ignoring the location of the iterator. The iterator then detects that the list was
-			modified, and the next time i.next() is called an exception (ConcurrentModificationException) is thrown.
+			modified, and the next time i.next() is called, an exception (ConcurrentModificationException) is thrown.
 
 TestPerformance.java
 
@@ -59,12 +59,12 @@ TestPerformance.java
 
 	listAccess - which type of List is better to use, and why?
 
-		 ArrayList is better to use when it comes to access because other than at size=10 it is faster at every size. Additionally,
-		 as the size increases the advantage of ArrayList compared to LinkedList only improves. For example at size 10000,
-		 ArrayList access takes ~8.66 ms on average compared to LinkedList access which takes 45.5 ms on average.
+		 ArrayList is better to use when it comes to access because, other than at size=10, it is faster at every size. Additionally,
+		 as the size increases the advantage of ArrayList compared to LinkedList only improves. For example, at size 10000,
+		 ArrayList access takes ~8.66 ms on average compared to LinkedList access, which takes 45.5 ms on average.
 
 	listAddRemove - which type of List is better to use, and why?
 
 		 LinkedList is better to use when it comes to Add/remove because it is faster at larger sizes. While at size=10, LinkedList add/remove
-		 does not have much of an advantage of ArrayList add/remove, by the time size=10000 LinkedList add/remove has an advantage over ArrayList
-		 add/remove with LinkedList add/remove taking only 2 ms on average compared to ArrayList add/remove taking 12 ms on average.
+		 does not have much of an advantage over ArrayList add/remove; by the time size=10000, LinkedList add/remove has an advantage over ArrayList
+		 add/remove with LinkedList add/remove takes only 2 ms on average, compared to ArrayList add/remove taking 12 ms on average.
