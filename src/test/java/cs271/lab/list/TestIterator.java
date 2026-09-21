@@ -81,7 +81,7 @@ public class TestIterator {
     // TODO using assertEquals and List.of, express which values are left in the list
     // See TestList.java for examples of how to use List.of; also see the Java List
     // interface for more information
-    fail("Not yet implemented"); // remove this line when done
+    assertEquals(List.of(33, 44, 55, 66), list);
   }
 
   @Test
