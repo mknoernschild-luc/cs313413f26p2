@@ -131,8 +131,9 @@ public class TestList {
 
   @Test
   public void testAddAll() {
-    // TODO in a single statement using addAll and List.of,
+    // TODO in a single statement using addAll and List.of: completed,
     // add items to the list to make the following assertions pass
+    list.addAll(List.of(33, 77, 44, 77, 55, 77, 66));
     // (without touching the assertions themselves)
     assertEquals(7, list.size());
     assertEquals(33, list.get(0).intValue());
