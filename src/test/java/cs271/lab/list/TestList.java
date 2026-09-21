@@ -99,12 +99,12 @@ public class TestList {
     list.add(77);
     list.add(6);
     list.remove(5); // TODO Question: What does this method do?
-    // TODO fix the expected values in the assertions below
-    assertEquals(0, list.size());
-    assertEquals(0, list.indexOf(77));
-    assertEquals(0, list.lastIndexOf(77));
-    assertEquals(0, list.get(2).intValue());
-    assertEquals(0, list.get(3).intValue());
+    // TODO fix the expected values in the assertions below: completed
+    assertEquals(6, list.size());
+    assertEquals(1, list.indexOf(77));
+    assertEquals(3, list.lastIndexOf(77));
+    assertEquals(4, list.get(2).intValue());
+    assertEquals(77, list.get(3).intValue());
     list.remove(Integer.valueOf(5)); // TODO Question: What does this one do?
     assertEquals(0, list.size());
     assertEquals(0, list.indexOf(77));
@@ -122,10 +122,11 @@ public class TestList {
     list.add(55);
     list.add(77);
     list.add(66);
-    // TODO using containsAll and List.of (see above),
+    // TODO using containsAll and List.of (see above): completed,
     // 1) assert that list contains all five different numbers added
+    assertTrue(list.containsAll(List.of(33, 77, 44, 55, 66)));
     // 2) assert that list does not contain all of 11, 22, and 33
-    fail("Not yet implemented"); // remove this line when done
+    assertFalse(list.containsAll(List.of(11, 22, 33)));
   }
 
   @Test
